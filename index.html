@@ -5,15 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Veterans' Story Hour</title>
   <meta name="description" content="Armed Forces veterans into schools, youth centres and libraries — lived stories of bravery, honour and civic pride.">
+  <link rel="canonical" href="https://rhodirish-afk.github.io/veterans-story-hour/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Veterans' Story Hour">
+  <meta property="og:title" content="Veterans' Story Hour">
+  <meta property="og:description" content="Armed Forces veterans into schools, youth centres and libraries — lived stories of bravery, honour and civic pride.">
+  <meta property="og:url" content="https://rhodirish-afk.github.io/veterans-story-hour/">
+  <meta property="og:image" content="https://rhodirish-afk.github.io/veterans-story-hour/assets/og.svg">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veterans' Story Hour">
+  <meta name="twitter:description" content="Armed Forces veterans into schools, youth centres and libraries — lived stories of bravery, honour and civic pride.">
+  <meta name="twitter:image" content="https://rhodirish-afk.github.io/veterans-story-hour/assets/og.svg">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header-inner">
-      <p class="site-title"><a href="index.html">Veterans' Story Hour</a></p>
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/mark.svg" width="34" height="34" alt="">
+        <p class="site-title">Veterans' Story Hour</p>
+      </a>
       <nav class="site-nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
@@ -24,11 +41,19 @@
     </div>
   </header>
 
-  <main>
-    <p class="tagline">Lived service · Civic pride</p>
-    <h1>Veterans' Story Hour</h1>
-    <p class="lede">Armed Forces veterans into schools, youth centres and libraries — to recount lived stories of bravery, honour and quiet pride.</p>
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <img class="hero-mark" src="assets/mark.svg" width="88" height="88" alt="">
+      <div>
+        <p class="tagline">Lived service · Civic pride</p>
+        <h1>Veterans' Story Hour</h1>
+        <p class="lede">Armed Forces veterans into schools, youth centres and libraries — to recount lived stories of bravery, honour and quiet pride.</p>
+        <img class="hero-laurel" src="assets/laurel.svg" width="180" height="40" alt="">
+      </div>
+    </div>
+  </section>
 
+  <main id="main">
     <p>You will no doubt have heard of Drag Queen Story Hour, where colourful drag artists visit schools and libraries to tell stories to young and older children. We want to harness some of that energy and design to bring Armed Forces veterans instead — men and women who have borne the weight of service — into classrooms, youth centres and libraries.</p>
 
     <p>The narratives we propose are those of patriotism and civic pride — stories drawn from every background, every race, yet all of them British and all of them unashamed of that identity. We require fresh channels through which these living testimonies may reach the young — channels that speak with the authority of experience rather than the rhetoric of ideology.</p>
@@ -37,24 +62,41 @@
       <h2>Inaugural pilot — Monday 14 September 2026</h2>
       <p><strong>09:00–11:00</strong> · The Vine Inn, 11 Abingdon Road, Cumnor, Oxfordshire OX2 9QN</p>
       <p>British Armed Forces veterans share short first-person accounts of service, resilience and comradeship. Tea, coffee, homemade cakes and bacon rolls. Places are limited.</p>
-      <p>
+      <div class="cta-actions">
         <a class="btn" href="events.html">Pilot details</a>
         <a class="btn btn-ghost" href="involve.html">Get involved</a>
-      </p>
+      </div>
     </div>
 
+    <h2>Who this is for</h2>
+    <p class="section-intro">Veterans willing to speak. Schools, libraries and youth centres willing to host. Supporters who want the next generation to hear what service actually means — from those who practised it.</p>
     <div class="ask-box">
-      <h2>Who this is for</h2>
-      <p>Veterans willing to speak. Schools, libraries and youth centres willing to host. Supporters who want the next generation to hear what service actually means — from those who practised it.</p>
       <p>Supported by a Civic Future Action Grant. Starting in Oxfordshire, with the aim of going national.</p>
+      <div class="cta-actions">
+        <a class="btn" href="stories.html">Two VC stories</a>
+        <a class="btn btn-ghost" href="about.html">Why this exists</a>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
-      <p><strong>Veterans' Story Hour</strong> · <a href="mailto:myone_ie@hotmail.co.uk">myone_ie@hotmail.co.uk</a> · <a href="tel:+447752144777">07752 144777</a></p>
-      <p>The Vine Inn, 11 Abingdon Road, Cumnor, OX2 9QN</p>
-      <p class="fine">Campaign by <a href="https://roryhanrahan.co.uk/veterans.html">Rory Hanrahan</a> · Supported by a Civic Future Action Grant</p>
+      <div>
+        <p><strong>Veterans' Story Hour</strong></p>
+        <p><a href="mailto:myone_ie@hotmail.co.uk">myone_ie@hotmail.co.uk</a> · <a href="tel:+447752144777">07752 144777</a></p>
+        <p>The Vine Inn, 11 Abingdon Road, Cumnor, OX2 9QN</p>
+        <p class="fine">Campaign by <a href="https://roryhanrahan.co.uk/veterans.html">Rory Hanrahan</a> · Supported by a Civic Future Action Grant</p>
+        <p class="fine">Header mark and Open Graph artwork: original SVG for this site.</p>
+      </div>
+      <div>
+        <ul class="footer-nav" aria-label="Footer">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="involve.html">Get involved</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
