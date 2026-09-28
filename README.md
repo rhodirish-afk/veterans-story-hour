@@ -7,13 +7,18 @@ Static GitHub Pages site for the Veterans' Story Hour campaign — Armed Forces 
 
 ## Pages
 
-- `index.html` — home (hero band)
+- `index.html` — home (hero band, pilot film, first school booking, Yarning teaser)
 - `about.html` — purpose and tone
-- `events.html` — inaugural pilot and Oxfordshire outreach
-- `stories.html` — O'Leary VC and Gordon VC (story cards)
+- `events.html` — pilot, first school assembly, further school hours
+- `schools.html` — how a school hour works, consent form, activity guides
+- `parent-consent.html`, `activity-guides.html` — printable school documents
+- `stories.html` — Victoria Cross story cards
+- `ajex.html` — AJEX and Tommy Gould VC
+- `yarning.html` — Yarning: veterans' stories by the fire, a winter pub evening
 - `involve.html` — speak, host, support, contact
+- `book.html`, `thanks.html` — booking request form (FormSubmit, captcha on) and thank-you page
 - `css/styles.css` — navy / cream / crimson / gold campaign styles
-- `assets/` — SVG mark, laurel, Open Graph image (`og.svg`)
+- `assets/` — SVG mark, laurel, fireside illustration, Open Graph image (`og.svg`), `film.js` (click-to-load YouTube)
 
 ## Design notes
 
