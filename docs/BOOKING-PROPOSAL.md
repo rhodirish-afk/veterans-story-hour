@@ -1,6 +1,6 @@
 # Booking system proposal (draft, not live)
 
-Status: **draft on branch `booking-form`**. Nothing here is live until Rory merges the PR into `main`.
+Status: **live** (merged into `main`, 28 Sep 2026, with Rory's approval).
 
 ## The flow at a glance
 
@@ -21,7 +21,7 @@ FormSubmit won't deliver anything to a new address until that address has been a
 - Suggested: after merging, Rory sends one test request himself, clicks the activation link (check Junk as well), then sends a second test to make sure the table email and the auto-acknowledgement both come through.
 - If the address was already activated for the Deplorable Book Club form, activation may already be done. One test submission will show whether it is.
 - Optional hardening: once activated, FormSubmit shows a random alias for the address. Swapping it into the form `action` keeps the email address out of the page source.
-- Spam: the form uses a hidden `_honey` honeypot field and `_captcha=false`, the same as the Deplorable Book Club form. If spam gets through, change `_captcha` to `true`, which adds FormSubmit's "I'm not a robot" step.
+- Spam: FormSubmit's captcha is **on** (the default; there is no `_captcha=false` field), so senders see a short "I'm not a robot" step before being taken to the thanks page. A hidden `_honey` honeypot field catches bots as well.
 
 ## Hidden form settings
 
@@ -29,7 +29,7 @@ FormSubmit won't deliver anything to a new address until that address has been a
 |---|---|---|
 | `_subject` | VSH booking request | Subject line of the email Rory receives |
 | `_template` | table | Lays the email out as a tidy table |
-| `_captcha` | false | Skips FormSubmit's captcha page (honeypot used instead) |
+| `_captcha` | (not set, so captcha is on) | FormSubmit shows its captcha step before delivering |
 | `_next` | https://rhodirish-afk.github.io/veterans-story-hour/thanks.html | Confirmation page shown after sending |
 | `_honey` | (empty, hidden) | Honeypot: bots fill it in and get dropped |
 | `_autoresponse` | Acknowledgement text | Automatic reply to the sender, confirming receipt with no date promised |
@@ -135,6 +135,5 @@ Placeholders are in `[SQUARE BRACKETS]`.
 
 - [ ] Reply target: 3 working days is suggested. Change it if you'd like a different promise.
 - [ ] Activate FormSubmit (see above) straight after merging.
-- [ ] Captcha: keep `false` with the honeypot, or switch to `true`.
-- [ ] Decide whether to add `book.html` to `sitemap.xml` at go-live (not added on this branch).
+- [x] `book.html` added to `sitemap.xml` at go-live.
 - [ ] Set up the private tracker sheet from the CSV.
