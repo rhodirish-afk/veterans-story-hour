@@ -1,0 +1,40 @@
+name: Build share image
+
+# Renders assets/og.svg to assets/og.png (1200x630) for Open Graph / Twitter
+# cards, which don't reliably support SVG. Binary files can't be pushed through
+# the tooling used to prepare this site, so the PNG is built here instead.
+on:
+  push:
+    paths:
+      - 'assets/og.svg'
+      - '.github/workflows/build-og.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-og-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render og.png with headless Chrome
+        run: |
+          google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars \
+            --window-size=1200,630 --screenshot="$PWD/assets/og.png" "file://$PWD/assets/og.svg"
+          file assets/og.png
+      - name: Commit rendered file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/og.png
+          if git diff --staged --quiet; then
+            echo "Share image unchanged"
+          else
+            git commit -m "Render share image assets/og.png from og.svg"
+            git push
+          fi
