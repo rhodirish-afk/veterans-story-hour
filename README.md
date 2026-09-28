@@ -16,6 +16,7 @@ Static GitHub Pages site for the Veterans' Story Hour campaign — Armed Forces 
 - `ajex.html` — AJEX and Tommy Gould VC
 - `yarning.html` — Yarning: veterans' stories by the fire, a winter pub evening
 - `involve.html` — speak, host, support, contact
+- `book.html`, `thanks.html` — booking request form (FormSubmit, captcha on) and thank-you page
 - `css/styles.css` — navy / cream / crimson / gold campaign styles
 - `assets/` — SVG mark, laurel, fireside illustration, Open Graph image (`og.svg`), `film.js` (click-to-load YouTube)
 
