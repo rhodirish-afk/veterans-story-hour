@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1a24">
+  <title>Book a Story Hour — Veterans' Story Hour</title>
+  <meta name="description" content="Ask for a Veterans' Story Hour at your school, pub or community group. Veterans of the British Armed Forces give short first-person accounts of service. Free to schools.">
+  <link rel="canonical" href="https://rhodirish-afk.github.io/veterans-story-hour/book.html">
+  <meta property="og:title" content="Book a Story Hour — Veterans' Story Hour">
+  <meta property="og:url" content="https://rhodirish-afk.github.io/veterans-story-hour/book.html">
+  <meta property="og:image" content="https://rhodirish-afk.github.io/veterans-story-hour/assets/og.svg">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Booking form: page-local styles, matching the site palette */
+    .booking-form { background: var(--foam); border: 1px solid var(--line); border-left: 5px solid var(--crimson); border-radius: var(--radius); padding: 1.35rem 1.4rem 1.6rem; margin: 1.5rem 0; }
+    .booking-form fieldset { border: none; margin: 0 0 1.5rem; padding: 0; }
+    .booking-form legend { font-family: "Fraunces", "Source Serif 4", Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); padding: 0 0 0.35rem; margin-bottom: 0.85rem; border-bottom: 2px solid var(--gold); width: 100%; }
+    .field { margin-bottom: 1rem; }
+    .field-row { display: grid; gap: 0 1rem; }
+    @media (min-width: 640px) { .field-row { grid-template-columns: 1fr 1fr; } }
+    .booking-form label, .booking-form .group-label { display: block; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.35rem; }
+    .booking-form .opt { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--ink-soft); }
+    .booking-form input[type="text"], .booking-form input[type="email"], .booking-form input[type="tel"], .booking-form input[type="date"], .booking-form input[type="number"], .booking-form select, .booking-form textarea { width: 100%; min-height: var(--touch); font: inherit; font-size: 1rem; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.55rem 0.7rem; }
+    .booking-form textarea { min-height: 6rem; resize: vertical; }
+    .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+    .booking-form .hint { font-size: 0.88rem; color: var(--ink-soft); margin: 0.3rem 0 0; }
+    .choice-list { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; margin: 0; padding: 0; list-style: none; }
+    .choice-list li { margin: 0; }
+    .choice-list label { display: inline-flex; align-items: center; gap: 0.45rem; min-height: var(--touch); text-transform: none; letter-spacing: 0; font-weight: 400; font-size: 0.95rem; color: var(--ink); margin: 0; cursor: pointer; }
+    .choice-list input { width: 1.1rem; height: 1.1rem; accent-color: var(--crimson); }
+    .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/mark.svg" width="34" height="34" alt="">
+        <p class="site-title">Veterans' Story Hour</p>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="schools.html">Schools</a>
+        <a href="stories.html">Stories</a>
+        <a href="ajex.html">AJEX</a>
+        <a href="yarning.html">Yarning</a>
+        <a href="involve.html">Get involved</a>
+        <a href="book.html" aria-current="page">Book</a>
+      </nav>
+    </div>
+  </header>
+  <div class="page-band">
+    <div class="page-band-inner">
+      <p class="tagline">Schools · Pubs · Community groups</p>
+      <h1>Book a Story Hour</h1>
+      <p class="lede">Veterans of the British Armed Forces giving short, first-person accounts of service, followed by your questions. Tell us a little about your group and the dates that suit, and we will come back to you.</p>
+    </div>
+  </div>
+  <main id="main">
+    <h2>How it works</h2>
+    <ul>
+      <li><strong>Schools:</strong> an assembly, classroom or sixth-form session of 45 to 60 minutes, with one to three speakers. Free to schools, supported by a <a href="https://civicfuture.org/" target="_blank" rel="noopener">Civic Future Action Grant</a>.</li>
+      <li><strong>Pubs and community groups:</strong> an evening talk with time for questions. Tell us what you have in mind.</li>
+      <li>Sending this form is a request, not a booking. We will reply to talk through dates, speakers and any safeguarding arrangements before anything is confirmed.</li>
+    </ul>
+
+    <form class="booking-form" action="https://formsubmit.co/myone_ie@hotmail.co.uk" method="POST">
+      <input type="hidden" name="_subject" value="VSH booking request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://rhodirish-afk.github.io/veterans-story-hour/thanks.html">
+      <input type="hidden" name="_autoresponse" value="Thank you for your request to Veterans' Story Hour. This is an automatic note to say it has arrived safely. Rory will read it personally and reply by email or phone to talk through dates, speakers and arrangements. Please note this is not yet a confirmed booking: no date is fixed until we have spoken and agreed it together. If anything is urgent, call 07752 144777. With thanks, Veterans' Story Hour">
+      <div class="hp-field" aria-hidden="true">
+        <label for="honey">Leave this field empty</label>
+        <input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field">
+          <span class="group-label" id="orgtype-label">Organisation type</span>
+          <ul class="choice-list" role="radiogroup" aria-labelledby="orgtype-label">
+            <li><label><input type="radio" name="Organisation type" value="School" required> School</label></li>
+            <li><label><input type="radio" name="Organisation type" value="Pub"> Pub</label></li>
+            <li><label><input type="radio" name="Organisation type" value="Community group"> Community group</label></li>
+            <li><label><input type="radio" name="Organisation type" value="Other"> Other</label></li>
+          </ul>
+        </div>
+        <div class="field">
+          <label for="org">Organisation name</label>
+          <input type="text" id="org" name="Organisation name" required autocomplete="organization">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="contact">Contact name</label>
+            <input type="text" id="contact" name="Contact name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="role">Role <span class="opt">(e.g. Head of History, landlord, chair)</span></label>
+            <input type="text" id="role" name="Role" autocomplete="organization-title">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="Phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="town">Town and postcode</label>
+          <input type="text" id="town" name="Town / postcode" required autocomplete="postal-code">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>When and what</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="date1">Preferred date (1st choice)</label>
+            <input type="date" id="date1" name="Preferred date - 1st choice">
+          </div>
+          <div class="field">
+            <label for="date2">Preferred date (2nd choice)</label>
+            <input type="date" id="date2" name="Preferred date - 2nd choice">
+          </div>
+        </div>
+        <div class="field">
+          <label for="timeofday">Time of day</label>
+          <select id="timeofday" name="Time of day">
+            <option value="">Select one</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="format">Format</label>
+          <select id="format" name="Format" required>
+            <option value="">Select one</option>
+            <option>School assembly</option>
+            <option>Classroom session</option>
+            <option>Sixth-form session</option>
+            <option>Evening talk</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="audience">Audience size <span class="opt">(approx.)</span></label>
+            <input type="text" id="audience" name="Audience size" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="ages">Age or year group</label>
+            <input type="text" id="ages" name="Age / year group" placeholder="e.g. Year 9, sixth form, adults">
+          </div>
+        </div>
+        <div class="field">
+          <label for="access">Accessibility or safeguarding notes <span class="opt">(optional)</span></label>
+          <textarea id="access" name="Accessibility / safeguarding notes" rows="3"></textarea>
+          <p class="hint">For example: step-free access, hearing loop, DBS or visitor procedures, anything our speakers should know beforehand.</p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Anything else</legend>
+        <div class="field">
+          <label for="heard">How did you hear about us? <span class="opt">(optional)</span></label>
+          <input type="text" id="heard" name="How they heard">
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="opt">(optional)</span></label>
+          <textarea id="message" name="Message" rows="4"></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn">Send booking request</button>
+      <p class="hint">Your details go only to Rory Hanrahan, who runs Veterans' Story Hour, and are used only to arrange your session. Form delivery is handled by FormSubmit.</p>
+    </form>
+
+    <h2>Prefer to talk?</h2>
+    <ul class="contact-list">
+      <li><strong>Email</strong> <a href="mailto:myone_ie@hotmail.co.uk?subject=Veterans%20Story%20Hour%20booking">myone_ie@hotmail.co.uk</a></li>
+      <li><strong>Phone</strong> <a href="tel:+447752144777">07752 144777</a></li>
+    </ul>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>
+        <p><strong>Veterans' Story Hour</strong></p>
+        <p><a href="mailto:myone_ie@hotmail.co.uk?subject=Veterans%20Story%20Hour">myone_ie@hotmail.co.uk</a> · <a href="tel:+447752144777">07752 144777</a></p>
+        <p>The Vine Inn, 11 Abingdon Road, Cumnor, OX2 9QN</p>
+        <p class="fine">Campaign by <a href="https://roryhanrahan.co.uk/">Rory Hanrahan</a> · Supported by a <a href="https://civicfuture.org/" target="_blank" rel="noopener">Civic Future Action Grant</a></p>
+      </div>
+      <div>
+        <ul class="footer-nav" aria-label="Footer">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="schools.html">Schools</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="ajex.html">AJEX</a></li>
+          <li><a href="yarning.html">Yarning</a></li>
+          <li><a href="involve.html">Get involved</a></li>
+          <li><a href="book.html" aria-current="page">Book</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
