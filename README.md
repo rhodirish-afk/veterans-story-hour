@@ -14,7 +14,7 @@ Static GitHub Pages site for the Veterans' Story Hour campaign — Armed Forces 
 - `parent-consent.html`, `activity-guides.html` — printable school documents
 - `stories.html` — Victoria Cross story cards
 - `ajex.html` — AJEX and Tommy Gould VC
-- `yarning.html` — Yarning: veterans' stories by the fire, a winter pub evening
+- `yarning.html` — Yarning: the winter series of veterans' stories in pubs (hosted by Rory; any welcoming pub or space; summer sessions to follow)
 - `involve.html` — speak, host, support, contact
 - `book.html`, `thanks.html` — booking request form (FormSubmit, captcha on) and thank-you page
 - `css/styles.css` — navy / cream / crimson / gold campaign styles
